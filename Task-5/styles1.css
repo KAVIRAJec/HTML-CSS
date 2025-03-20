@@ -1,0 +1,111 @@
+/* Overall styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: bisque;
+    color:black;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header styles */
+header {
+    background-color: gray;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Main Styles */
+main h1 {
+    margin: 0;
+    padding-top: 20px;
+    text-align: center;
+}
+
+main p {
+    text-align: center;
+    font-size: large;
+    margin: 5px;
+}
+
+/* Modal styles */
+button {
+    background-color: rgb(49, 128, 187);
+    color:aliceblue;
+    padding: 15px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    font-size: medium;
+    margin-top: 15px;
+}
+
+.modal button {
+    background-color: rgb(215, 37, 37);
+    color: white;
+    padding: 10px 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 200px;
+    overflow: auto;
+    background-color: white;
+    position: absolute;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 8, 8, 0.5);
+}
+
+#modal-toggle {
+    display: none;
+}
+
+.modal-open {
+    display: inline-block;
+    background-color: rgb(49, 128, 187);
+    color:aliceblue;
+    padding: 15px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    font-size: medium;
+    margin-top: 15px;
+}
+
+#modal-toggle:checked ~ .modal {
+    display: block;
+}
+#modal-toggle:checked ~ .overlay {
+    display: block;
+}
+
+/* Footer styles */
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: gray;
+    color: white;
+    margin-top: 50px;
+    padding: 5px 0 15px 0;
+}
