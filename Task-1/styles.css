@@ -1,4 +1,8 @@
 /* Overall styles */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: blanchedalmond;
     font-family: Arial, sans-serif;
@@ -39,9 +43,6 @@ nav ul li a {
     font-size: larger;
 }
 
-html {
-    scroll-behavior: smooth;
-}
 /* Main section styles */
 section {
     margin-top: 60px;
