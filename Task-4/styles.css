@@ -1,0 +1,122 @@
+/* Overall styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: bisque;
+    color:black;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header styles */
+header {
+    background-color: gray;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Main Styles */
+main h1 {
+    margin: 0;
+    padding-top: 20px;
+    text-align: center;
+}
+
+main p {
+    text-align: center;
+    font-size: large;
+    margin: 5px;
+}
+
+/* DropDown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-color: rgb(160, 98, 98);
+    color: aliceblue;
+    padding: 10px;
+    border: 2px solid rgb(119, 53, 53);
+    border-radius: 10px;
+    margin: 20px;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+span {
+    display: block;
+}
+
+.dropdown-menu span {
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu span:hover {
+    background-color: rgb(151, 75, 75);
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    top: 40px;
+    left: 0;
+}
+
+/* Sub Dropdown styles */
+.subdropdown {
+    position: relative;
+}
+
+.dropdown-submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 150px;
+}
+
+.dropdown-submenu span {
+    padding: 10px;
+    min-width: 150px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-submenu span:hover {
+    background-color: rgb(119, 53, 53);
+}
+
+.subdropdown:hover .dropdown-submenu {
+    display: block;
+}
+
+/* Footer styles */
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: gray;
+    color: white;
+    margin-top: 50px;
+    padding: 5px 0 15px 0;
+}
