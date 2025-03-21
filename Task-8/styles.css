@@ -1,0 +1,112 @@
+/* Overall styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: bisque;
+    color:black;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header styles */
+header {
+    background-color: gray;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Main Styles */
+main {
+    min-height: 70vh;
+}
+
+main h1 {
+    margin: 0;
+    padding-top: 20px;
+    text-align: center;
+}
+
+main p {
+    text-align: center;
+    font-size: large;
+    margin: 5px;
+}
+
+/* Accordion Style */
+.accordion {
+    background-color: aliceblue;
+    color: black;
+    cursor: pointer;
+    margin: 10px auto;
+    padding: 10px 20px;
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+    max-width: 650px;
+    border-radius: 10px;
+}
+
+.accordion input {
+    display: none;
+}
+
+.accordion label {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f4e9e9;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-bottom: 1px dotted #555;
+    transition: background-color 1s ease;
+    user-select: none;
+}
+
+.accordion label:hover {
+    background-color: #968383;
+    color:white
+}
+
+.accordion input:checked + label {
+    background-color: #968383;
+    color:white
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 10px;
+    margin-bottom: 5px;
+    background-color: #f4e9e9;
+    border-radius: 10px;
+    
+    transition: max-height 1s ease-in-out, padding 0.5s ease-in-out;
+}
+
+.accordion input:checked + label + .accordion-content {
+    max-height: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#check1:checked ~ .accordion-content:nth-of-type(1),
+#check1:checked ~ .accordion-content:nth-of-type(2),
+#check1:checked ~ .accordion-content:nth-of-type(3),
+#check1:checked ~ .accordion-content:nth-of-type(4) {
+    display: block;
+}
+
+/* Footer styles */
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: gray;
+    color: white;
+    margin-top: 10px;
+    padding: 5px 0 15px 0;
+}
