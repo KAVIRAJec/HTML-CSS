@@ -66,6 +66,7 @@ input {
     cursor: pointer;
     border: 0px solid rgb(74, 73, 73);
     border-radius: 10px; 
+    transition: background-color 0.3s ease-in-out;
 }
 
 #tab1:checked ~ .tab-labels .tab1,
@@ -90,12 +91,26 @@ input {
 
 #tab-content1, #tab-content2, #tab-content3 {
     display: none;
+    animation: fadeIn 1s ease-in-out;
 }
 
 #tab1:checked ~ .tab-content #tab-content1,
 #tab2:checked ~ .tab-content #tab-content2,
 #tab3:checked ~ .tab-content #tab-content3{
     display: block;
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Footer styles */
