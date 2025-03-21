@@ -1,0 +1,109 @@
+/* Overall styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: bisque;
+    color:black;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header styles */
+header {
+    background-color: gray;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Main Styles */
+main {
+    min-height: 70vh;
+}
+
+main h1 {
+    margin: 0;
+    padding-top: 20px;
+    text-align: center;
+}
+
+main p {
+    text-align: center;
+    font-size: large;
+    margin: 5px;
+}
+
+/* Tabs label */
+.tabs {
+    max-width: 500px;
+    background-color: rgba(99, 106, 118, 0.479);
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    display: none;
+}
+
+.tab-labels {
+    display: inline-block;
+    justify-content: center;
+    padding: 15px 10px;
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+    border: 1px solid rgb(74, 73, 73);
+    border-radius: 10px; 
+}
+.tab-labels label {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 0px solid rgb(74, 73, 73);
+    border-radius: 10px; 
+}
+
+#tab1:checked ~ .tab-labels .tab1,
+#tab2:checked ~ .tab-labels .tab2,
+#tab3:checked ~ .tab-labels .tab3 {
+    background-color: black;
+    color: white;
+}
+.tab-labels label:hover {
+    background-color: #555;
+  }
+
+/* Tabs content */
+.tab-content {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+#tab-content1, #tab-content2, #tab-content3 {
+    display: none;
+}
+
+#tab1:checked ~ .tab-content #tab-content1,
+#tab2:checked ~ .tab-content #tab-content2,
+#tab3:checked ~ .tab-content #tab-content3{
+    display: block;
+}
+
+/* Footer styles */
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: gray;
+    color: white;
+    margin-top: 50px;
+    padding: 5px 0 15px 0;
+}
