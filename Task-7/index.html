@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Pure CSS Carousel</title>
+  </head>
+  <body>
+    <header>
+      <h2>Pure CSS Carousel</h2>
+    </header>
+    <main>
+        <div class="carousel">
+            <input type="radio" id="image1" name="image-control" checked />
+            <input type="radio" id="image2" name="image-control" />
+            <input type="radio" id="image3" name="image-control" />
+            <input type="radio" id="image4" name="image-control" />
+            <input type="radio" id="image5" name="image-control" />
+            
+            <div class="slides">
+                <div id="slide-1" class="slide">
+                    <img src="https://picsum.photos/300/200?random=1" alt="Image1" />
+                </div>
+                <div id="slide-2" class="slide">
+                    <img src="https://picsum.photos/300/200?random=2" alt="Image2" />
+                </div>
+                <div id="slide-3" class="slide">
+                    <img src="https://picsum.photos/300/200?random=3" alt="Image3" />
+                </div>
+                <div id="slide-4" class="slide">
+                    <img src="https://picsum.photos/300/200?random=4" alt="Image4" />
+                </div>
+                <div id="slide-5" class="slide">
+                    <img src="https://picsum.photos/300/200?random=5" alt="Image5" />
+                </div>
+            </div>
+
+            <div class="navigation">
+                <label for="image1" class="image1"></label>
+                <label for="image2" class="image2"></label>
+                <label for="image3" class="image3"></label>
+                <label for="image4" class="image4"></label>
+                <label for="image5" class="image5"></label>
+            </div>
+        </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 My Static Webpage. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
