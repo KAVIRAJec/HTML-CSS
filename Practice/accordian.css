@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+main {
+    width: 70%;
+    margin: 50px auto;
+    background-color: azure;
+    border-radius: 30px;
+}
+
+input {
+    display: none;
+}
+.header {
+    display: block;
+    padding: 15px;
+    font-size: x-large;
+    background-color: burlywood;
+    margin: 2px 0;
+    cursor: pointer;
+    user-select: none;
+}
+div {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    background-color: rgb(193, 208, 209);
+    transition: max-height 0.8s ease-in, opacity 0.8s ease-out;
+}
+#input1:checked ~ .content1,
+#input2:checked ~ .content2,
+#input3:checked ~ .content3 {
+    max-height: 200px;
+    opacity: 1;
+}
