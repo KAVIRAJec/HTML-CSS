@@ -1,0 +1,64 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+.parallax-1{
+    position: relative;
+    background-image: url('https://picsum.photos/600/400?random=1');
+}
+.parallax-2{
+    position: relative;
+    background-image: url('https://picsum.photos/600/400?random=2');
+}
+.parallax-3{
+    position: relative;
+    background-image: url('https://picsum.photos/600/400?random=3');
+}
+.parallax {
+    height: 100vh;
+    margin: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.7;
+}
+.title {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    transition: background-color 0.5s ease-in-out;
+}
+.title:hover {
+    background-color: rgba(222, 203, 183, 0.789);
+}
+.content {
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    background-color: rgba(232, 225, 199, 0.779);
+    opacity: 0.9;
+}
+.content h1 {
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    font-size: 35px;
+}
+.content p {
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+}
+
+@media (max-width: 420px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}

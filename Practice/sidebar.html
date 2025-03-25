@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header>
+    <header class="sidebar">
         <h1>My website</h1>
         <nav>
             <li><a href="#home">Home</a></li>
@@ -16,10 +17,24 @@
         </nav>
     </header>
     <main>
+        <i class="fa fa-bars" style="font-size:30px" onclick="toggleMenu()"></i>
         <section id="home">This is home page</section>
         <section id="about">This is About Page</section>
         <section id="contact">This is Contact Page</section>
         <footer>Copyrights @2025</footer>
+        <script>
+            function toggleMenu() {
+                var sidebar = document.querySelector('.sidebar');
+                if (sidebar.style.opacity === '1') {
+                    sidebar.style.opacity = '0';
+                    sidebar.style.maxWidth = '0';
+                } else {
+                    sidebar.style.opacity = '1';
+                    sidebar.style.maxWidth = '100vh';
+                    sidebar.style.transition = '1s';
+                }
+            }
+        </script>
     </main>
 </body>
 </html>
