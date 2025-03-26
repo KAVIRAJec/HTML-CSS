@@ -1,0 +1,496 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: custom-font;
+    text-align: center;
+    user-select: none;
+}
+@font-face {
+    font-family: "custom-font";
+    src: url(Touche-Medium-BF642a2ebfeab7c.otf);
+}
+/* Header */
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 25px 100px 20px;
+    border-bottom: 3px dotted rgba(0, 0, 0, 0.149);
+}
+header .title {
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+    font-size: 12px;
+}
+.title img {
+    width: 60px;
+    height: 55px;
+    opacity: 0.8;
+}
+.title-name {
+    display: flex;
+    justify-content: start;
+    text-align: left;
+    flex-direction: column;
+    gap: 2px;
+}
+.title .title-name h1 {
+    padding: 0;
+    margin: 0;
+    opacity: 0.7;
+}
+.title .title-name p {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.4;
+}
+header nav {
+    display: flex;
+    gap: calc(1vw + 7px);
+    padding-right: 10px;
+    justify-content: center;
+    align-items: center;
+}
+header nav li {
+    list-style: none;
+}
+header nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bolder;
+    opacity: 0.8;
+}
+header nav a:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.364);
+}
+.dropdown-container {
+    position: relative;
+}
+.dropdown-container img {
+    height: 10px;
+    width: 10px;
+    padding-left: 3px;
+    opacity: 0.8;
+}
+.dropdown {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.164);
+    border-radius: 5px;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-48%);
+    top: 100%;
+    transition: opacity 0.5s ease-out, max-height 0.5s ease-out;
+}
+.dropdown li {
+    padding: 12px 40px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.164);
+    text-align: center;
+    color: black;
+    text-wrap: nowrap;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.dropdown li:hover {
+    transition: transform 0.5s ease-out;
+    transform: translateX(3px);
+    color: rgba(0, 0, 0, 0.642);
+}
+.dropdown-container:hover .dropdown {
+    transition: all 0.7s ease-in;
+    opacity: 1;
+    max-height: 100vh;
+}
+@media (max-width:500px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0px;
+        padding: 25px 0px 20px;
+    }
+    header .title {
+        gap: 0px;
+        margin: auto;
+    }
+    header nav {
+        gap: 0px;
+        padding-right: 0px;
+    }
+    .dropdown-container img {
+        display: none;
+    }
+    header nav a {
+        font-size: 12px !important;
+    }
+}
+@media (max-width:720px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2px;
+    }
+    header .title {
+        gap: 2px;
+        margin: auto;
+    }
+    header nav {
+        gap: 2px;
+        padding-right: 0px;
+    }
+}
+@media (max-width: 950px) {
+    header {
+        padding: 25px 0px 20px;
+    }
+    header .title {
+        gap: 5px;
+    }
+    header nav {
+        gap:10px;
+        padding-right: 0px;
+    }
+    
+}
+
+/* Main */
+main {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 60px 20px 60px;
+    border-bottom: 3px dotted rgba(0, 0, 0, 0.149);
+    gap: 22px;
+}
+.main-content {
+    background-image: url(https://img.freepik.com/free-photo/portrait-young-stylish-girl-model-casual-summer-clothes-brown-hat-with-natural-makeup-glasses-isolated_158538-8562.jpg?t=st=1742978670~exp=1742982270~hmac=d7d7ed278f08ed96dd7b12a48f7259f646e836b1a2bf8f01119409ee4791a51d&w=740);
+    background-size: cover;
+    opacity: 0.9;
+    position: relative;
+    min-height: 300px;
+}
+.men {
+    background-image: url(https://img.freepik.com/premium-photo/full-length-handsome-young-man-pointing-copy-space-smiling-while-standing-against-grey-background_425904-39819.jpg?ga=GA1.1.1283928139.1720152730&semt=ais_hybrid);
+    background-size: cover;
+    opacity: 0.9;
+    position: relative;
+    min-height: 300px;
+}
+.women {
+    background-image: url(https://img.freepik.com/free-photo/beautifull-caucasian-woman-with-curly-hair-smiles-isolated_132075-7609.jpg?ga=GA1.1.1283928139.1720152730&semt=ais_hybrid);
+    background-size: cover;
+    opacity: 0.9;
+    position: relative;
+    min-height: 300px;
+}
+.kids {
+    background-image: url(https://img.freepik.com/free-photo/happy-little-best-friends-celebrating_23-2148984842.jpg?ga=GA1.1.1283928139.1720152730&semt=ais_hybrid);
+    background-size: cover;
+    opacity: 0.9;
+    position: relative;
+    min-height: 300px;
+}
+.accessories {
+    background-image: url(https://img.freepik.com/free-photo/model-career-kit-still-life_23-2150229758.jpg?ga=GA1.1.1283928139.1720152730&semt=ais_hybrid);
+    background-size: cover;
+    opacity: 0.9;
+    position: relative;
+    min-height: 300px;
+}
+@media (min-width: 800px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+        height: 89dvh;
+    }
+    .main-content {
+        grid-row: 1/ span 2;
+        grid-column: 1/ span 2;
+    }
+}
+.overlay {
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.main-content-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+    color: white;
+    opacity: 1;
+    text-align: left;
+}
+.main-content-text h1 {
+    font-size: 40px;
+    margin: 0;
+    font-weight: bolder;
+}
+.main-content-text p {
+    font-style: italic;
+    font-weight: 100;
+    padding: 5px 0 15px;
+}
+.main-content button {
+    padding: 14px 25px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+}
+.main-content button:hover {
+    background-color: white;
+    color: black;
+    transition: all 0.5s ease-out;
+}
+.sub-content-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    color: white;
+}
+.sub-content-text h1 {
+    margin: 0;
+}
+.sub-content-text p {
+    margin: 2px;
+    font-size: 15px;
+    font-style: italic;
+}
+.discover {
+    background-color: black;
+    opacity: 0;
+    position: absolute;
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+    top: 20px; 
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.discover h1 {
+    margin: 0;
+    opacity: 1;
+    color: white;
+    font-size: 20px;
+}
+.discover p {
+    margin: 0;
+    opacity: 0.9;
+    color: white;
+    word-spacing: 3px;
+    font-size: 15px;
+}
+.discover button {
+    padding: 14px 25px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+}
+.discover button:hover {
+    background-color: white;
+    color: black;
+    transition: all 0.5s ease-out;
+}
+.sub-container:hover .discover {
+    transition: all 0.5s ease-in;
+    opacity: 0.9;
+}
+
+/* Collections */
+section {
+    margin: 100px 190px;
+    position: relative;
+}
+section h1 {
+    margin: 0;
+    text-align: start;
+    font-size: 32px;
+}
+section p {
+    text-align: start;
+    margin: 0;
+    padding: 7px 0 0 0;
+    opacity: 0.3;
+    font-style: italic;
+}
+.image-grid {
+    margin: 60px 0 0 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 32px;
+    overflow: hidden;
+}
+.image-item {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+}
+.image-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.image-item h1 {
+    margin: 0;
+    font-size: 20px;
+}
+.image-item p {
+    margin: 0;
+    padding: 0;
+}
+.forward {
+    position: absolute;
+    top: 300px;
+    right: -50px;
+    height: 25px;
+    padding: 10px 10px;
+    border: 1px solid black;
+}
+.previous {
+    position: absolute;
+    top: 300px;
+    left: -80px;
+    height: 25px;
+    padding: 10px 10px;
+    border: 1px solid black;
+}
+.forward:hover, .previous:hover {
+    background-color: rgba(0, 0, 0, 0.133);
+    cursor: pointer;
+    transition: all 0.7s ease-in-out;
+    transform: scale(1.1);
+}
+@media (max-width: 1000px) {
+    section {
+        margin: 100px 80px
+    }
+    .image-grid {
+        gap: 16px;
+    }
+    .image-item {
+        max-width: 300px;
+    }
+    .previous, .forward {
+        top: 250px
+    }
+    .previous{
+        left:-50px
+    }
+}
+@media (max-width: 850px) {
+    section {
+        margin: 100px 50px
+    }
+    .image-grid {
+        gap: 16px;
+    }
+    .image-item {
+        max-width: 300px;
+    }
+}
+@media (max-width: 500px) {
+    .previous, .forward {
+        top: 280px
+    }
+}
+.border {
+    border-bottom: 3px dotted rgba(0, 0, 0, 0.149);
+}
+
+/* Footer */
+footer {
+    padding: 25px 0;
+    background-color: black;
+    color: white;
+}
+.footer {
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: start;
+    align-items: start;
+    gap: 40px;
+}
+.footer h1 {
+    font-size: 15px;
+    opacity: 0.6;
+}
+.footer p {
+    font-size: 13px;
+    margin: 0;
+    padding: 2px 0;
+}
+.social-container {
+    display: flex; 
+    justify-content: start;
+}
+.social {
+    height: 30px;
+    width: 30px;
+    padding-right: 8px;
+}
+.promotions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 10px 0;
+}
+.promotions img {
+    height: 20px;
+    width: 20px;
+}
+.vr {
+    border-left: 1px solid white; 
+    height: 180px; 
+    opacity: 0.4;
+}
+.promo-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+.promo-img {
+    height: 10px;
+}
+@media (max-width: 700px) {
+    .vr {
+        height: 0;
+    }
+    .footer {
+        text-align: center;
+        padding: 0 40px;
+    }
+    .social-container {
+        justify-content: center;
+    }
+    .promotions {
+        gap: 5px;
+    }
+}
