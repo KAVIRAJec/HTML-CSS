@@ -40,7 +40,6 @@ body {
 .content {
     margin: 0;
     padding: 20px;
-    height: 100vh;
     background-color: rgba(232, 225, 199, 0.779);
     opacity: 0.9;
 }
